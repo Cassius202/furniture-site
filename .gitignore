@@ -12,7 +12,7 @@ node_modules
 
 # Build outputs
 dist
-dist-ssr
+dist/
 .next               # Next.js build output
 out                  # Next.js static export
 build                # General build folder (some setups use this)
