@@ -1,0 +1,76 @@
+/* index.css */
+@import "tailwindcss";
+@variant dark (&:where(.dark, .dark *));
+
+@font-face {
+  font-family: 'Outfit';
+  src: url('./assets/fonts/Outfit-VariableFont_wght.ttf') format('truetype');
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-sans: 'Outfit', ui-sans-serif, system-ui;
+  --color-primary: #ff6421;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+ 
+}
+
+@layer components{
+  .slider-container {
+    scroll-behavior: smooth;
+  }
+  img, video {
+    width: 100%; height: 100%; 
+    object-fit: cover;
+  }
+  .darken {
+    background: linear-gradient(#00000055, #00000070);
+  }
+  .lighten {
+    background: linear-gradient(#ffffff55, #ffffff55);
+  }
+  .tooltip { 
+    @apply absolute text-xs whitespace-nowrap bg-slate-900 dark:bg-slate-200 text-white dark:text-slate-900 py-1 px-2 rounded-lg transition-transform duration-100 origin-top-left scale-0 group-hover:scale-100 max-sm:right-9 top-full max-sm:-translate-y-1/2 max-sm:origin-right
+  }
+  .btn-ghost {
+    @apply hover:bg-slate-500/30 transition-colors p-2 rounded-full cursor-pointer;
+  }
+  .light-gradient {
+    @apply bg-linear-to-b from-white to-gray-300 dark:from-gray-900 dark:to-gray-700;
+  }
+  .dark-gradient {
+    background: linear-gradient(to bottom, #111, rgb(15, 23, 15))
+  }
+  .section {
+    @apply pt-20 w-full items-center flex flex-col px-5 md:px-14 lg:px-24 xl:px-30
+  }
+  .title {
+    @apply text-4xl font-bold text-center dark:text-white
+  }
+  .subtitle {
+    @apply max-w-3xl text-lg text-center max-md:px-4 mt-3 dark:text-slate-200 text-gray-600
+  }
+  .highlight {
+    @apply text-primary
+  }
+  .light-shadow {
+    box-shadow: 1px 1px 8px rgba(145, 145, 145, 0.316); 
+  }
+  .dark-shadow {
+    box-shadow: 1px 1px 8px rgba(30, 30, 30, 0.316); 
+  }
+  button {
+    @apply cursor-pointer
+  }
+  .label {
+    @apply text-slate-700 dark:text-slate-200
+  }
+}
+
