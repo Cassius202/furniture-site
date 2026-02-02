@@ -19,9 +19,7 @@ const Footer = () => {
           {/* Logo and Description */}
           <div className="lg:col-span-1 md:col-span-2">
             <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-1">
-              <span>Luxe H</span>
-              <span className="inline-block">🏠</span>
-              <span>me</span>
+              <span>Rose Home</span>
             </h2>
             <p className="text-gray-400 mb-6 leading-relaxed">
               Transform your living spaces with our premium furniture collection. We create beautiful, functional environments that reflect your unique style.
@@ -166,7 +164,7 @@ const Footer = () => {
 
             {/* Copyright */}
             <div className="text-sm text-gray-400">
-              © 2026 Luxe Home. Made with <span className="text-red-500">❤️</span> by Luxe Team
+              © 2026 Luxe Home. Made with React by{" "}<span className="text-red-500">Cassius</span>
             </div>
           </div>
         </div>

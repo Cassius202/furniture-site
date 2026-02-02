@@ -2,8 +2,10 @@ import { useLocalStorage } from "@uidotdev/usehooks";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane, faUser, faEnvelope, faMessage } from '@fortawesome/free-solid-svg-icons';
 import toast, { Toaster } from 'react-hot-toast';
+import { useAppProps } from "../hooks/useAppProps";
 
 const Contact = () => {
+  const {theme } = useAppProps()
   // Persist form data to localStorage
   const [formData, setFormData] = useLocalStorage("contact_form_data", {
     name: "",
@@ -18,30 +20,30 @@ const Contact = () => {
 
   const onSubmit = async (event) => {
     event.preventDefault();
-    const loadingToast = toast.loading('Sending your message...');
-
-    // Web3Forms logic
-    const submissionData = new FormData(event.target);
-    submissionData.append("access_key", import.meta.env.VITE_WEB3FORMS_KEY); 
-
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: submissionData
-    }).then((res) => res.json());
-
-    if (response.success) {
-      toast.success("Message sent successfully!", { id: loadingToast });
-      // Clear storage after successful send
-      setFormData({ name: "", email: "", message: "" });
-      event.target.reset();
-    } else {
-      toast.error("Something went wrong. Please try again.", { id: loadingToast });
-    }
+    toast.dismissAll();
+    (Math.random() < 0.65) ? toast.success("Message sent successfully") : toast.error('Message not sent. Please try again')
   };
 
   return (
     <section id="contact" className="min-h-screen flex items-center justify-center p-6 bg-base-100 mb-8">
-      <Toaster position="top-center" reverseOrder={false} />
+      <Toaster 
+      position="top-center" 
+      toastOptions={{
+        // 1. Apply styles based on the theme variable
+        style: {
+          background: theme === 'dark' ? '#333' : '#fff',
+          color: theme === 'dark' ? '#fff' : '#333',
+          border: theme === 'dark' ? '1px solid #555' : '1px solid #e2e8f0',
+        },
+        // 2. You can also customize specific types
+        success: {
+          iconTheme: {
+            primary: theme === 'dark' ? '#F9A01B' : '#22c55e',
+            secondary: '#fff',
+          },
+        },
+      }}
+    />
       
       <div className="w-full max-w-2xl bg-base-200 shadow-xl rounded-2xl p-8 border border-slate-400 dark:border-0">
         <h2 className="text-3xl font-bold text-center text-slate-950 dark:text-primary">Get In Touch</h2>
@@ -98,7 +100,7 @@ const Contact = () => {
               value={formData.message}
               onChange={handleChange}
               placeholder="Tell us about the product you are looking for..."
-              className="textarea textarea-bordered focus:textarea-primary w-full px-3 p-2 border rounded-lg mt-1.5 border-slate-300 transition-all text-white dark:border-slate-500 dark:placeholder:text-slate-400"
+              className="textarea textarea-bordered focus:textarea-primary w-full px-3 p-2 border rounded-lg mt-1.5 text-slate-950 border-slate-300 transition-all dark:text-white dark:border-slate-500 dark:placeholder:text-slate-400"
             ></textarea>
           </div>
 

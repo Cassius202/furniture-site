@@ -10,7 +10,7 @@ export const AppProvider = ( {children} ) => {
     if (theme === 'system') {
       setTheme(prefersDark ? 'dark' : 'light')
     };
-  }, []);
+  }, [theme, setTheme]); //how do you run this once on mount???
 
   useEffect(()=> {
     if (theme === 'dark') {

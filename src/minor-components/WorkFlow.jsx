@@ -3,7 +3,7 @@ import { workflowSteps } from "../assets/assets"
 
 export const WorkFlow = () => {
   return (
-    <div className="mt-5 section max-md:px-14">
+    <div className="mt-5 lg:mt-0 section max-md:px-14">
       <div className="title text-3xl text-slate-900 dark:text-slate-100 mb-10">
         WorkFlow
       </div>

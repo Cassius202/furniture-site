@@ -3,7 +3,7 @@ import { assets } from "../assets/assets";
 const ImageGrid = () => {
   return (
     <div className="w-full min-h-screen mt-10">
-      <div className="grid grid-cols-1 wrap md:grid-cols-2 lg:grid-cols-3 grid-rows-[350px_350px_350px_350px] md:grid-rows-[280px_280px_300px] gap-4 max-md:gap-6 px-10">
+      <div className="grid grid-cols-1 wrap md:grid-cols-2 lg:grid-cols-3 grid-rows-[350px_350px_350px_350px] md:grid-rows-[280px_280px_300px] lg:grid-rows-[280px_280px] gap-4 max-md:gap-6 px-10">
         
         {/* Item 1 */}
         <div className="rounded-lg overflow-hidden md:row-span-2 relative group">
