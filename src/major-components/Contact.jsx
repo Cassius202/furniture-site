@@ -20,7 +20,7 @@ const Contact = () => {
 
   const onSubmit = async (event) => {
     event.preventDefault();
-    toast.dismissAll();
+    toast.dismiss();
     (Math.random() < 0.65) ? toast.success("Message sent successfully") : toast.error('Message not sent. Please try again')
   };
 
