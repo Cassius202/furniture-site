@@ -45,7 +45,7 @@ const Contact = () => {
       }}
     />
       
-      <div className="w-full max-w-2xl bg-base-200 shadow-xl rounded-2xl p-8 border border-slate-400 dark:border-0">
+      <div className="w-full max-w-2xl bg-base-200 sm:shadow-xl rounded-2xl sm:p-8 sm:border border-slate-400 dark:border-0">
         <h2 className="text-3xl font-bold text-center text-slate-950 dark:text-primary">Get In Touch</h2>
         <p className="subtitle mb-7">Ask about the product you want</p>
         

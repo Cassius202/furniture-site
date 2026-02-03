@@ -5,7 +5,7 @@ import { FaStar } from "react-icons/fa"
 
 const Growth = () => {
   return (
-    <section className="min-h-screen w-full overflow-x-hidden section max-md:px-12">
+    <section className="min-h-screen w-full overflow-x-hidden section max-md:px-12 max-sm:px-3">
       <h1 className="title">
         Our <span className="highlight">Growth</span>
       </h1>

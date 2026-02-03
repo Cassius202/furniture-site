@@ -16,7 +16,7 @@ const Loader = ({ children }) => {
       window.addEventListener('load', handlePageLoad);
     }
 
-    const timeout = setTimeout(handlePageLoad, 4000); // Safety fallback
+    const timeout = setTimeout(handlePageLoad, 5000); // Safety fallback
 
     return () => {
       window.removeEventListener('load', handlePageLoad);
@@ -54,7 +54,7 @@ const LoaderFrame = () => {
       <motion.div 
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
-        className="text-amber-500 text-5xl md:text-7xl font-bold tracking-tighter"
+        className="text-amber-500 grid place-content-center text-5xl md:text-7xl font-bold tracking-tighter"
       >
         Rose Home
       </motion.div>

@@ -27,7 +27,7 @@ const Store = () => {
         Discover our carefully curated selection of premium furniture pieces
         designed to transform your living spaces.
       </p>
-      <div className="grid w-full grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-15 max-sm:px-10">
+      <div className="grid w-full grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-15 max-sm:px-2 px-8 md:px-18">
         {products.map((product) => {
           let starNum = product.rating.star;
           let starExtra = Rounder(starNum, 0.5) - Math.floor(starNum);

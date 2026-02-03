@@ -105,9 +105,9 @@ const Work = () => {
           </div>
         ))}
       </div>
-      <div className="max-md:px-10 w-full flex flex-col items-center mb-10">
-        <div className="border rounded-lg border-slate-300 dark:border-slate-600 min-h-30 w-full max-w-2xl flex flex-col justify-center h-full">
-          <menu className="grid grid-cols-2 gap-y-2 pl-10 ">
+      <div className="max-md:px-2 w-full flex flex-col items-center mb-10">
+        <div className="border py-4 rounded-lg border-slate-300 dark:border-slate-600 min-h-30 w-full max-w-2xl flex flex-col justify-center h-full">
+          <menu className="grid grid-cols-1 sm:grid-cols-2 gap-y-2 pl-10 max-md:pl-12">
             {serviceList.map((service) => {
               return (
                 <li
@@ -121,7 +121,7 @@ const Work = () => {
             })}
           </menu>
         </div>
-        <div className="button mt-8 gap-4 flex flex-col items-center w-full">
+        <div className="button px-8 mt-8 gap-4 flex flex-col items-center w-full">
           <button className="px-2 sm:px-4 py-3 rounded-lg rounded-tl-xs bg-slate-900 dark:bg-white dark:text-slate-900 transition hover:scale-[1.03] text-white w-48 max-sm:text-sm whitespace-nowrap max-sm:w-full">
             Schedule Consultation
           </button>

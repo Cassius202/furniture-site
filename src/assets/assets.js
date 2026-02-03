@@ -50,39 +50,39 @@ export const assets = {
 
 export const reviews = [
   {
-    client: "Vera Oluwaseun",
+    client: "Jerome Livine",
     image: clientImg1,
     rating: 4,
     text: "Beautiful dining table. Worth the hype",
-    job: "photographer",
+    job: "Photographer",
   },
   {
-    client: "Chinedu Okeke",
-    image: clientImg2, // you can replace with actual imported image
+    client: "Marc Dubois",
+    image: clientImg2,
     rating: 5,
-    text: "This sofa is the truth! Super comfortable, looks expensive, and my whole parlor now feels like VIP lounge. Delivery was fast too. 100% recommend!",
+    text: "This sofa is the truth! Super comfortable, looks expensive, and my whole parlor now feels like a VIP lounge. Delivery was fast too. 100% recommend!",
     job: "Director",
   },
   {
-    client: "Aisha Ibrahim",
+    client: "Josh Schmidt",
     image: clientImg3,
     rating: 5,
-    text: "The dining set changed our family dinners completely! Everyone fights for who sits first Solid wood, beautiful finish, and it wasn't even that expensive. Thank you guys! Tailwind does not have standard utilities for radial or conic gradients by default, but you can use arbitrary values in square brackets. ",
-    job: "photographer",
+    text: "The dining set changed our family dinners completely! Everyone fights for who sits first. Solid wood, beautiful finish, and it wasn't even that expensive. Thank you guys!",
+    job: "Creative Lead",
   },
   {
-    client: "Tunde Adebayo",
+    client: "Lukas Berg",
     image: clientImg4,
     rating: 4,
     text: "Bought the centre table and it’s giving luxury on a budget! Very strong, modern design, and matches everything perfectly. Only small issue was minor scratch on delivery but they sorted it quickly.",
-    job: "Interior designer",
+    job: "Interior Designer",
   },
   {
-    client: "Funmi Adeyemi",
+    client: "Sarah Jenkins",
     image: clientImg5,
     rating: 5,
-    text: "My bedroom now feels like a 5-star hotel! The bed frame is elegant, sturdy and the quality is top-notch. Sleeping has never been this sweet Worth every kobo!",
-    job: "photographer",
+    text: "My bedroom now feels like a 5-star hotel! The bed frame is elegant, sturdy and the quality is top-notch. Sleeping has never been this sweet. Worth every penny!",
+    job: "Freelancer",
   },
 ];
 
