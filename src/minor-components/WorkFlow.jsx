@@ -6,7 +6,7 @@ export const WorkFlow = () => {
     <div className="mt-10 lg:mt-20 px-6 md:px-14 lg:px-24 max-w-7xl flex flex-col mx-auto">
       
       {/* Responsive Title: Larger on desktop, centered on mobile */}
-      <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-slate-100 mb-10 text-center text-left tracking-tight">
+      <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-slate-100 mb-10 text-center tracking-tight">
         WorkFlow
       </h2>
 
