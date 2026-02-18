@@ -1,6 +1,6 @@
-import { useLocalStorage } from "@uidotdev/usehooks";
 import { useEffect, useState } from "react";
 import { AppContext } from "./AppContext";
+import { useLocalStorage } from "../hooks/useLocalStorage";
 
 export const AppProvider = ( {children} ) => {
   const [theme, setTheme] = useLocalStorage('theme', 'system');

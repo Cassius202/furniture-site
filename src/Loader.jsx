@@ -3,30 +3,21 @@ import { motion, AnimatePresence } from 'motion/react'
 
 const Loader = ({ children }) => {
   const [loading, setLoading] = useState(true);
+  // const checker = true
 
-  useEffect(() => {
-    const handlePageLoad = () => {
-      // Small buffer to ensure everything feels settled
-      setTimeout(() => setLoading(false), 3500)
-    };
+ useEffect(() => {
+  // Set the fixed duration here (e.g., 3500ms)
+  const timer = setTimeout(() => {
+    setLoading(false);
+  }, 2500);
 
-    if (document.readyState === 'complete') {
-      handlePageLoad();
-    } else {
-      window.addEventListener('load', handlePageLoad);
-    }
-
-    const timeout = setTimeout(handlePageLoad, 5000); // Safety fallback
-
-    return () => {
-      window.removeEventListener('load', handlePageLoad);
-      clearTimeout(timeout);
-    }
-  }, [])
+  // Cleanup function to prevent memory leaks if the component unmounts
+  return () => clearTimeout(timer);
+}, []);
 
   return (
     <AnimatePresence mode="wait">
-      {loading ? (
+      { loading ? (
         /* Key is essential here for AnimatePresence to track the exit */
         <LoaderFrame key="loader-screen" />
       ) : (
@@ -54,9 +45,11 @@ const LoaderFrame = () => {
       <motion.div 
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
-        className="text-amber-500 grid place-content-center text-5xl md:text-7xl font-bold tracking-tighter"
+        className="text-amber-500 flex items-center flex-col gap-y-2 text-5xl md:text-7xl font-bold tracking-tighter relative"
       >
-        Rose Home
+        <p>Rose Home</p>
+        <div className="loader h-1.5 rounded-full bg-amber-500">
+        </div>
       </motion.div>
     </motion.div>
   )

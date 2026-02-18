@@ -14,7 +14,7 @@ function App() {
   return (
     <div id="#App" className="transition-colors duration-400 dark:bg-gray-950 bg-white min-h-screen max-w-screen overflow-x-hidden">
       <div className="absolute pointer-events-none select-none h-screen w-full overflow-hidden bg-black">
-        <img src={assets.background} alt="" className="opacity-40" />
+        <img loading="lazy" src={assets.background} alt="hero image" className="opacity-40" decoding="async" />
       </div>
       {/* header and sidebar go here  */}
       <Sidebar />

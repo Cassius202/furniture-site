@@ -1,7 +1,7 @@
 // assets.js
 
 // Method 1: Using relative imports (most common in modern projects with Vite, Create React App, Next.js, etc.)
-import background from "./background_image.png";
+import background from "./background_image.webp";
 import couch from "./couch.jpg";
 import homeChair from "./home_chair.jpg";
 import lamp from "./lamp.jpg";

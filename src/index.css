@@ -102,3 +102,19 @@
   }
 }
 
+.loader {
+  width: 100%;
+  margin-top: 10px;
+  transform-origin: left;
+  animation: loading 2.5s ease-out infinite;
+}
+
+@keyframes loading {
+  0% {
+    scale: 0 1;
+  }
+  100% {
+    scale-x: 1;
+  }
+}
+
